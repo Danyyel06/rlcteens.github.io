@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Coming Soon Page</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <img src="RLC COMING SOON PAGE.jpg" alt="" class="image" id="rlcoverlay" />
+      <header class="Yoo">Coming Soon!!</header>
+      <h2>BE FILLED WITH THE HOLY SPIRIT</h2>
+      <p>
+        Text : Ephesians 5: 18 - 21<br />
+        Time : 9-10AM <br />
+        Venue : Redeeming Love Chapel
+      </p>
+      <div class="time-content">
+        <div class="time days">
+          <span class="number" id = "days">00</span>
+          <span class="text">days</span>
+        </div>
+        <div class="time hours">
+          <span class="number" id = "hours">00</span>
+          <span class="text">hours</span>
+        </div>
+        <div class="time minutes">
+          <span class="number" id = "minutes">00</span>
+          <span class="text">minutes</span>
+        </div>
+        <div class="time seconds">
+          <span class="number" id = "seconds">00</span>
+          <span class="text">seconds</span>
+        </div>
+      </div>
+
+    </section>
+      <!-- <script src="js/script.js"></script> -->
+
+
+
+      <script>
+        var countDownDate = new Date("Aug 28, 2023 00:00:00").getTime();
+        var x = setInterval(function(){
+          var now = new Date().getTime();
+          var distance = countDownDate - now;
+
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          document.getElementById("days").innerHTML = days;
+          document.getElementById("hours").innerHTML = hours;
+          document.getElementById("minutes").innerHTML = minutes;
+          document.getElementById("seconds").innerHTML = seconds;
+
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("days").innerHTML = "00";
+            document.getElementById("hours").innerHTML = "00";
+            document.getElementById("minutes").innerHTML = "00";
+            document.getElementById("seconds").innerHTML = "00";
+
+
+          }
+
+        },1000)
+    </script>
+  </body>
+</html>
